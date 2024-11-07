@@ -1,0 +1,802 @@
+.nav-item {
+    /* border: 2px solid red; */
+    position: relative;
+}
+
+
+/* splash screen */
+
+
+.splash {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    z-index: 111111111111111;
+    left: -100%;
+    animation-name: splashanime;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count:1 ;
+    
+}
+
+.splash img {
+    /* border: 4px solid red; */
+    width: 190px;
+}
+
+
+@keyframes splashanime{
+    0%{
+        left: 0;
+
+    }
+    75%{
+        
+        opacity: 1;
+    }
+    80%{
+        left: 0;
+        opacity: 0;
+    }
+    100%{
+        left: -100%;
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+/* all about imange mask ani */
+
+
+
+.image-hover{
+    width: 90%;
+    mask-image: url(Realar_files/about-1-mask.png);
+    mask-size: 100% 100%;
+    overflow: hidden;
+}
+
+.image-hover::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(140deg, rgba(0,0,0,0) 34%, rgba(255,255,255,0.351) 50%,rgba(255,255,255,0) 63%);
+
+}
+
+.image-hover:hover::before{
+    left: 100%;
+    transition: .3s linear;
+}
+
+.dd1 {
+    width: 200px;
+    height: 0;
+    top: 72px;
+    z-index: -11111111;
+    transition: z-index 50ms , height 700ms;
+    background-color: gray;
+    position: absolute;
+    overflow: hidden;
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav-item:hover .dd1 {
+    height: 200px;
+    z-index: 11111;
+    transition: 1s all linear;
+
+    transition: z-index 50ms , height 2000ms;
+
+
+}
+.dd1:hover {
+    height: 200px;
+    z-index: 11111;
+    transition: 1s all linear;
+
+    transition: z-index 1000ms , height 2000ms;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.box {
+    /* border: 2px solid red; */
+    height: 50px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.sp1 {
+    width: 80%;
+    border: .5px solid white;
+}
+.sp2 {
+    width: 50%;
+    border: .5px solid white;
+    transition: .5s all linear;
+
+}
+.box:hover .sp2 {
+    width: 80%;
+    transition: .5s all linear;
+}
+
+
+
+/* second section */
+
+
+.home-page{
+    border-radius: 35px;
+    /* background-image: url(Realar_files/hero_bg_1_1.png); */
+    background-position: center;
+    animation: image-anime 15s linear infinite;
+    overflow: hidden;
+    /* border: 5px solid yellow; */
+}
+
+
+@keyframes image-anime {
+    0%{
+        background-image: url(Realar_files/hero_bg_1_1.png);
+        background-size: 105%;
+     }
+
+     25%{
+        background-image: url(Realar_files/hero_bg_1_1.png);
+        background-size: 115%;
+     }
+
+     30%{
+        background-image: url(Realar_files/hero_bg_1_2.png);
+        background-size: 105%;
+     }
+
+     55%{
+        background-image: url(Realar_files/hero_bg_1_2.png);
+        background-size: 115%;
+     }
+
+     60%{
+        background-image: url(Realar_files/hero_bg_1_3.png);
+        background-size: 105%;
+     }
+
+     95%{
+        background-image: url(Realar_files/hero_bg_1_3.png);
+        background-size: 115%;
+     }
+
+     100%{
+        background-image: url(Realar_files/hero_bg_1_1.png);
+        background-size: 105%;
+     }
+     
+
+}
+
+.left-1{
+    animation: text-anime 15s linear infinite;
+    z-index: 1;
+    transform: translateY(-100%);
+}
+
+.left-12{
+    animation: text-anime 15s linear infinite;
+    z-index: 1;
+    transform: translateY(-100%);
+    animation-delay: 4.5s;
+}
+
+
+
+.left-3{
+    animation: text-anime 15s linear infinite;
+    z-index: 1;
+    transform: translateY(-100%);
+    animation-delay: 9s;
+}
+
+
+
+@keyframes text-anime{
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    15%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    24%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    28%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+
+
+
+
+    
+}
+
+.left-p1{
+    animation: P-anime 15s linear infinite;
+    transform: translateY(200%); 
+    bottom: 20%;
+}
+.left-p2{
+    animation: P-anime 15s linear infinite;
+    transform: translateY(200%); 
+    bottom: 20%;
+    animation-delay: 4.5s;
+}
+.left-p3{
+    animation: P-anime 15s linear infinite;
+    transform: translateY(200%); 
+    bottom: 20%;
+    animation-delay: 9s;
+}
+
+@keyframes P-anime{
+    0%{
+        transform: translateY(200%);
+        opacity: 0;
+    }
+
+    15%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    24%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    28%{
+        transform: translateY(200%);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(200%);
+        opacity: 0;
+    }
+}
+
+
+
+
+.right{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play{
+    width: 130px;
+    height: 130px !important;
+    background-color: rgba(255, 255, 255, 0.37);
+    color: white;
+}
+
+.play-anime{
+    animation: border-scale 3s linear infinite;
+}
+
+.play-anime:nth-child(2){
+    animation-delay: 1.5s;
+}
+
+@keyframes border-scale{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+        transform: scale(1.6);
+    }
+}
+
+
+
+.imu IMG{
+    mask-image: url(Realar_files/about-1-mask.png);
+    mask-size: 100% 100%;
+}
+
+.imganime img{ 
+    mask-image: url(Realar_files/maskkkkk.png);
+    mask-size: 100% 100% ;
+}
+
+
+
+.project-section::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.369);
+    justify-content: space-between;
+}
+
+
+
+.card-h{
+    background-image: url(Realar_files/aminities1-1.png);
+    background-position: center;
+    background-size: cover;
+    mask-image: url(Realar_files/aminities-shape1.png);
+    mask-size: 100% 100%;
+    position: relative;
+
+}
+
+
+
+.card-h:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* background-color: black; */
+    background-color: #1c2d37;
+    transition: .2s linear;
+
+}
+
+
+.card-h:hover::before{
+    background-color: rgba(0, 0, 0, 0.301);
+    transition: .3s linear;
+}
+
+
+.card-h img{
+    transition: .3s linear;
+
+}
+
+
+.card-h :hover img{
+    transition: .3 linear;
+    transform: scaleX(-1);
+}
+
+
+
+/* long card  */
+
+
+
+
+.card-h{
+    background-image: url(Realar_files/aminities1-1.png);
+    
+    background-position: center;
+    background-size: cover;
+    mask-image: url(Realar_files/aminities-shape1.png);
+    mask-size: 100% 100%;
+    position: relative;
+    animation-name: card-loop;
+    animation-duration: 10s;
+    animation-iteration-count: infinite ;
+}
+
+.card-h ::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1c2d37;
+    transition: .2s linear;
+}
+
+.card-h :hover::before{
+    background-color: rgba(0,0,0,0.301);
+    transition: .3s linear;
+}
+
+.card-h img {
+    transition: .3s linear;
+}
+
+.card-h:hover img {
+    transition: .3s linear;
+    transform: scaleX(-1);
+}
+
+@keyframes card-loop{
+    0%{
+        transform: translateX(0%);
+    }
+    20%{
+        transform: translateX(0%);
+    }
+    25%{
+        transform: translateX(-112%);
+    }
+    45%{
+        transform: translateX(-112%);
+    }
+    50%{
+        transform: translateX(-225%);
+    }
+    70%{
+        transform: translateX(-225%);
+    }
+    75%{
+        transform: translateX(-340%);
+    }
+    85%{
+        transform: translateX(-340%);
+    }
+    90%{
+        transform: translateX(-454.80%);
+    }
+    100%{
+        transform: translateX(-454.80%);
+        
+    }
+}
+
+
+.cardbox1{
+    height: 400px;
+    background-image: url(Realar_files/team_1_1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.images-text{
+    width: 80%;
+    height: 20%;
+    transition: .3s linear;
+    margin-bottom: 30px;
+    background-color: #1c2d3791;
+    mask-image: url(Realar_files/team-shape1-2.png);
+    mask-size: 100% 100%;
+}
+.cardbox1:hover .images-text{
+    height: 85%;
+    backdrop-filter: blur(6px);
+    transition: .3s linear;
+    mask-image: url(Realar_files/team-shape1.png);
+    mask-size: 100% 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.cardbox2{
+    height: 400px;
+    background-image: url(Realar_files/team_1_2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.images-text2{
+    width: 80%;
+    height: 20%;
+    transition: .3s linear;
+    margin-bottom: 30px;
+    background-color: #1c2d3791;
+    mask-image: url(Realar_files/team-shape1-2.png);
+    mask-size: 100% 100%;
+}
+.cardbox2:hover .images-text{
+    height: 85%;
+    backdrop-filter: blur(6px);
+    transition: .3s linear;
+    mask-image: url(Realar_files/team-shape1.png);
+    mask-size: 100% 100%;
+}
+
+
+
+/* Discover mordern anime */
+
+
+
+.animation-div{
+    /* border: 3px s  olid red!important; */
+    animation-name: slideranimation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes slideranimation{
+    0%{
+      transform: translateX(0);
+    }
+    20%{
+      transform: translateX(0);
+    }
+    25%{
+      transform: translateX(-100%);
+    }
+    45%{
+      transform: translateX(-100%);
+    }
+    50%{
+      transform: translateX(-200%);
+    }
+    70%{
+      transform: translateX(-200%);
+    }
+    75%{
+      transform: translateX(-300%);
+      
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
+  .animation-div:hover  .imgdiv::before{
+    content: "";
+    background-image: url(Realar_files/project_shape1_1.png);
+     transition:  .3s ease-in-out;
+    background-size: cover;
+     position: absolute;
+     width: 70%;
+     height: 70%;
+    background-color: rgba(62, 29, 58, 0.278);
+  }
+  
+  
+  .image-anime img{
+    mask-image: url(shap34.jpg)!important;
+    mask-size: 100% 100%!important;
+    /* border: 4px solid red; */
+  }
+
+
+
+
+
+
+.cardbox3{
+    height: 400px;
+    background-image: url(Realar_files/team_1_3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.images-text3{
+    width: 80%;
+    height: 20%;
+    transition: .3s linear;
+    margin-bottom: 30px;
+    background-color: #1c2d3791;
+    mask-image: url(Realar_files/team-shape1-2.png);
+    mask-size: 100% 100%;
+}
+.cardbox3:hover .images-text{
+    height: 85%;
+    backdrop-filter: blur(6px);
+    transition: .3s linear;
+    mask-image: url(Realar_files/team-shape1.png);
+    mask-size: 100% 100%;
+}
+
+
+
+
+
+
+/* section 11 */
+
+.float-img{
+    animation-name: float-image;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes float-image{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+}
+
+.feedslider{
+    animation-name: pikachu;
+    /* animation-timing-function: l; */
+    animation-iteration-count: infinite;
+    animation-duration: 18s;
+}
+
+@keyframes pikachu{
+    0%{
+        transform: translateX(0);
+    }
+    29%{
+        transform: translateX(0);
+    }
+    34%{
+        transform: translateX(-100%);
+    }
+    63%{
+        transform: translateX(-100%);
+    }
+    68%{
+        transform: translateX(-200%);
+    }
+    95%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+}
+
+
+
+.fivee img{
+    mask-image: url(Realar_files/maskkkkk.png);
+    mask-size: 100% 100%;
+}
+
+
+/* footer */
+
+
+
+.footer-hov a{
+    color: rgba(0, 0, 0, 0.726);
+    transition: all .2s linear;
+
+}
+
+.footer-hov a:hover{
+    color: white;
+    transition: all .2s linear;
+}
+.property-icon{
+    transition: all .2s linear;
+
+}
+.property-icon:hover{
+    transform: rotateY(180deg);
+    transition: all .2s linear;
+}
+
+
+
+
+/* oue team member card loop */
+
+
+
+.loopies{
+    
+    
+    background-position: center;
+    background-size: cover;
+    mask-image: url(Realar_files/aminities-shape1.png);
+    mask-size: 100% 100%;
+    position: relative;
+    animation-name: card-loop;
+    animation-duration: 10s;
+    animation-iteration-count: infinite ;
+}
+
+
+
+
+
+
+@keyframes card-loop{
+    0%{
+        transform: translateX(0%);
+    }
+    20%{
+        transform: translateX(0%);
+    }
+    25%{
+        transform: translateX(-112%);
+    }
+    45%{
+        transform: translateX(-112%);
+    }
+    50%{
+        transform: translateX(-225%);
+    }
+    70%{
+        transform: translateX(-225%);
+    }
+    75%{
+        transform: translateX(-340%);
+    }
+    85%{
+        transform: translateX(-340%);
+    }
+    90%{
+        transform: translateX(-454.80%);
+    }
+    100%{
+        transform: translateX(-454.80%);
+        
+    }
+}

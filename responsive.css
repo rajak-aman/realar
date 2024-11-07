@@ -1,0 +1,133 @@
+@media only screen and (max-width: 620px) {
+
+
+
+    .trex {
+        width: 100%;
+    }
+    .trex h1{
+        font-size: 45px !important;
+        /* background-color: rgb(10, 74, 212); */
+        font-weight: 100;
+        width: 90%!important;
+      
+    }
+
+    .trex P{
+        /* background-color: RED; */
+        font-size: 15 px !important;
+    }
+
+
+    .main-card-section {
+        overflow: hidden!important;
+    }
+
+
+
+    .cards-secr{
+        overflow: hidden!important;
+        background-color: aqua;
+        width: 250%;
+        border: 5px solid red;
+    }
+
+
+    .footeri{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        
+    }
+
+    .sec850{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        height: auto;
+        /* background-color: black; */
+        gap: 60px;
+
+    }
+
+
+
+
+
+    /* navbar animation  */
+
+
+    .home-page{
+        border-radius: 35px;
+        /* background-image: url(Realar_files/hero_bg_1_1.png); */
+        background-position: center;
+        animation: image-anime 15s linear infinite;
+        overflow: hidden;
+        /* border: 5px solid yellow; */
+        
+       
+
+    }
+    
+    
+    @keyframes image-anime {
+        0%{
+            background-image: url(Realar_files/hero_bg_1_1.png);
+            background-size: cover;
+            object-fit: cover;
+            background-size: 105%;
+         }
+    
+         25%{
+            background-image: url(Realar_files/hero_bg_1_1.png);
+            background-size: cover;
+            object-fit: cover;
+            background-size: 315%;
+         }
+    
+         30%{
+            background-image: url(Realar_files/hero_bg_1_2.png);
+            background-size: cover;
+            object-fit: cover;
+            background-size: 305%;
+         }
+    
+         55%{
+            background-image: url(Realar_files/hero_bg_1_2.png);
+            background-size: cover;
+            object-fit: cover;
+            background-size: 315%;
+         }
+    
+         60%{
+            background-image: url(Realar_files/hero_bg_1_3.png);
+            background-size: cover;
+            object-fit: cover;
+            background-size: 305%;
+         }
+    
+         95%{
+            background-image: url(Realar_files/hero_bg_1_3.png);
+            background-size: cover;
+            object-fit: cover;
+            background-size: 315%;
+
+         }
+    
+         100%{
+            background-image: url(Realar_files/hero_bg_1_1.png);
+            background-size: cover;
+            object-fit: cover;
+            background-size: 305%;
+         }
+         
+    
+    }
+
+
+    
+  }
+
+
+
