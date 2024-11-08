@@ -27,7 +27,7 @@
 
     .cards-secr{
         overflow: hidden!important;
-        background-color: aqua;
+        /* background-color: aqua; */
         width: 250%;
         border: 5px solid red;
     }
