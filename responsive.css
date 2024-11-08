@@ -19,6 +19,20 @@
     }
 
 
+    .aboutus{
+        height: auto;
+        text-align: center;
+        
+        
+        /* background-color: aqua; */
+    }
+
+    .aboutus h1{
+       margin-left: 85px;
+        /* background-color: blue; */
+
+    }
+
     .main-card-section {
         overflow: hidden!important;
     }
@@ -125,7 +139,20 @@
     
     }
 
+    .nnn{
+        height: auto !important;
+    }
 
+    .discover{
+        height: auto !important;
+    }
+
+    .takelook img{
+        /* background-color: red; */
+        width: 100%;
+        height: auto !important;
+        margin-top: 20px;
+    }
     
   }
 
